@@ -1,5 +1,10 @@
 source 'https://rubygems.org'
 
+# Specify the Ruby version we're using
+ruby '2.0.0'
+
+# Rails defaults
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.1'
 
@@ -27,19 +32,29 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
-group :doc do
-  # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', require: false
+# learn-rails
+
+# helps to use rails without a database
+gem 'activerecord-tableless'
+# support for Zurb foundation
+gem 'compass-rails', '~> 2.0.alpha.0'
+# configuration framework
+gem 'figaro'
+# access to the MailChimp API
+gem 'gibbon'
+# use google drive spreadsheets for data storage
+gem 'google_drive'
+# for static pages like 'about'
+gem 'high_voltage'
+# forms made easy
+gem 'simple_form'
+# front-end framework
+gem 'zurb-foundation'
+group :development do
+  # helps when things go wrong
+  gem 'better_errors'
+  # supresses distracting messages in the log
+  gem 'quiet_assets'
+  # generates files for an application layout
+  gem 'rails_layout'
 end
-
-# Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.1.2'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano', group: :development
-
-# Use debugger
-# gem 'debugger', group: [:development, :test]
